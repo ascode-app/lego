@@ -1,2 +1,2 @@
-# lego
-LEGO
+# lego-as-code
+LEGO as Code
