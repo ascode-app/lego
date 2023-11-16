@@ -1,5 +1,5 @@
-# lego-as-code
-LEGO as Code
+lego-as-code
+# LEGO as Code
 
 # Sample Serverless app on Azure
 
