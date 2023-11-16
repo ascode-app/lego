@@ -26,7 +26,7 @@ provider "cloudflare" {
 
 # The basis of anything in Azure: We need a Resource Group
 resource "azurerm_resource_group" "serverless" {
-  name     = "serverless-example"
+  name     = "lego"
   location = "West US"
 
   tags {
