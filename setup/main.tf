@@ -26,7 +26,7 @@ resource "azurerm_resource_group" "serverless" {
   name     = "lego"
   location = "West US"
 
-  tags {
+  tags = {
     environment = "LEGO as Code"
   }
 }
