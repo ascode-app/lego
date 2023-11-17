@@ -9,7 +9,7 @@
 # But first, configure the Azure Provider and see here to authenticate:
 # https://www.terraform.io/docs/providers/azurerm/authenticating_via_azure_cli.html
 provider "azurerm" { 
-  version = "~> 1.3"
+  // version = "~> 1.3" # version is managed in versions.tf
 }
 
 # Configure the Cloudflare provider
