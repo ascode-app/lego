@@ -39,7 +39,7 @@ resource "azurerm_resource_group" "serverless" {
 # Blob store is provided by a 'Storage Account'
 resource "azurerm_storage_account" "frontend" {
   name                 = "frontendassets"
-  resource_group_name = "${azurerm_resource_group.serverless.name}"
+  # DEPRECATED resource_group_name = "${azurerm_resource_group.serverless.name}"
   location            = "${azurerm_resource_group.serverless.location}"
   account_tier        = "Standard"
 
