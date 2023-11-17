@@ -97,23 +97,22 @@ output "css" {
 #######################################################################
 ### 4. DNS:
 # Since we want to make use of a free CDN and SSL termination service,
-# head over to CloudFlare.com, create your domain, and use the below to 
+# head over to CloudFlare.com, create your domain (nowadays called zone_id), and use the below to 
 # configure it.  
 resource "cloudflare_record" "cfazure" {
-  domain  = "ascode.app"
+  zone_id = "ascode.app"
   name    = "azure"
   value   = "frontendassets.blob.core.windows.net"
   type    = "CNAME"
   proxied = true
   ttl     = 1
-  zone_id = "westcentralus"
 }
 
 # If you need to use the "Indirect CNAME Verification" method, you'll
 # want something like this:
 #
 #  resource "cloudflare_record" "cfazure_verify" {
-#   domain  = "ascode.app"
+#   zone_id = "ascode.app"
 #   name    = "asverify.azure"
 #   value   = "asverify.frontendassets.blob.core.windows.net"
 #   type    = "CNAME"
