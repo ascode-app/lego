@@ -13,12 +13,12 @@ provider "azurerm" {
 }
 
 # Configure the Cloudflare provider
-variable CLOUDFLARE_EMAIL {}
-variable CLOUDFLARE_TOKEN {}
+variable cloudflare_email {}
+variable cloudflare_api_token {}
 
 provider "cloudflare" {
-  email = "${var.CLOUDFLARE_EMAIL}"
-  token = "${var.CLOUDFLARE_TOKEN}"
+  email = "${var.cloudflare_email}"
+  api_token = "${var.cloudflare_api-token}"
 }
 
 #######################################################################
