@@ -8,17 +8,15 @@
 
 # But first, configure the Azure Provider and see here to authenticate:
 # https://www.terraform.io/docs/providers/azurerm/authenticating_via_azure_cli.html
-provider "azurerm" { 
-  // version = "~> 1.3" # version is managed in versions.tf
-}
+provider "azurerm" { } # version is managed in versions.tf
 
 # Configure the Cloudflare provider
 # variable cloudflare_email {} # declared in variable.tf
 # variable cloudflare_api_token {} # declared in variables.tf
 
 provider "cloudflare" {
-  email = "${var.cloudflare_email}"
-  api_token = "${var.cloudflare_api_token}"
+  email = var.cloudflare_email
+  api_token = var.cloudflare_api_token
 }
 
 #######################################################################
