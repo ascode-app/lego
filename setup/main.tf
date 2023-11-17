@@ -13,8 +13,8 @@ provider "azurerm" {
 }
 
 # Configure the Cloudflare provider
-variable cloudflare_email {}
-variable cloudflare_api_token {}
+# variable cloudflare_email {} # declared in variable.tf
+# variable cloudflare_api_token {} # declared in variables.tf
 
 provider "cloudflare" {
   email = "${var.cloudflare_email}"
