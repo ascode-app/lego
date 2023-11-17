@@ -11,11 +11,10 @@
 provider "azurerm" { } # version is managed in versions.tf
 
 # Configure the Cloudflare provider
-# variable cloudflare_email {} # declared in variable.tf
-# variable cloudflare_api_token {} # declared in variables.tf
+# https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs
+# variable cloudflare_api_token is declared in variables.tf
 
 provider "cloudflare" {
-  email = var.cloudflare_email
   api_token = var.cloudflare_api_token
 }
 
