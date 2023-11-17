@@ -106,6 +106,7 @@ resource "cloudflare_record" "cfazure" {
   type    = "CNAME"
   proxied = true
   ttl     = 1
+  zone_id = "westcentralus"
 }
 
 # If you need to use the "Indirect CNAME Verification" method, you'll
